@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>REGISTER page</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+<body>
+
+<div>
+	<nav>
+		<div class="logo">
+			<h3><b>StudyRAR</b></h3>	
+		</div>
+
+		<ul>
+			<li><a href="login.php">Login</a></li>
+			<li><a href="register.php">Register</a></li>
+			<li><a href="file:///D:/WEB/About%20NN/top.html">About</a></li>
+			<li><a href=""></a></li>
+		</ul>
+
+		<div class="menu-toggle">
+			<input type="checkbox">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</nav>
+</div>
+
+<div id="wrap">
+
+<section>
+	<form id="login-form" name="theForm" action="file:///D:/WEB/A2-DIAMOND/project1/top.html" onsubmit="return validateForm()" method="post">
+		<div class="judul">
+			<h1 id="title">StudyRAR</h1>
+			<p id="deskripsi">REGISTER</p>
+		</div>
+		<div class="grup-form">
+			<label id="email-l">EMAIL</label>
+			<input type="email" name="email" id="email" class="control-form" placeholder="enter your email" required />
+		</div>
+		<div class="grup-form">
+			<label id="user-l">USERNAME</label>
+			<input type="username" name="username" id="username" class="control-form" placeholder="enter your username" required />
+		</div>
+		<div class="grup-form">
+			<label id="password-l">PASSWORD</label>
+			<input type="password" name="password" id="password" class="control-form" placeholder="enter your password" required />
+		</div>
+		<div class="grup-form">
+			<label id="password-l">PASSWORD VERIFICATION</label>
+			<input type="password" name="password-v" id="password" class="control-form" placeholder="enter your password verification" required />
+		</div>
+		<div class="grup-form">
+			<button type="submit" value="Submit" id="submit" class="submit-button">DONE</button>
+		</div>
+	</form>
+</section>
+
+</div>
+
+<script type="text/javascript" src="script2.js"></script>
+
+</body>
+</html>

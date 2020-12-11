@@ -1,0 +1,248 @@
+/**{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}*/
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+body{
+	font-family: 'Montserrat', sans-serif;
+	overflow-x: hidden; 
+}
+
+/* Navbar */
+nav{
+	display: flex;
+	background-color: lightblue;
+	justify-content: space-around;
+	padding: 13px 0;
+	color: rgb(234, 292, 255);
+	position: fixed;
+	z-index: 10;
+	width: 100%;
+	right: 0;
+	top: 0;
+}
+
+nav.logo{
+	font-family: sans-serif;
+	letter-spacing: 3px;
+}
+
+nav ul{
+	display: flex;
+	list-style: none;
+	width: 40%;
+	justify-content: space-between; 
+}
+
+nav ul li a{
+	color: rgb(234, 292, 255);
+	text-decoration: none;
+	font-size: 0.9em;
+}
+
+nav ul li a:hover{
+	color: rgb(234, 292, 255);
+}
+
+
+
+/* Hum Menu*/
+.menu-toggle{
+	display: none;
+	flex-direction: column;
+	height: 20px;
+	justify-content: space-between;
+	position: relative;
+}
+
+
+.menu-toggle input{
+	position: absolute;
+	width: 40px;
+	height: 28px;
+	left: -5px;
+	top: -3px;
+	opacity: 0;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.menu-toggle span{
+	display: block;
+	width: 25px;
+	height: 3px;
+	background-color: rgb(234, 292, 255);
+	border-radius: 3px;
+	transition: all 0.5s;
+}
+
+
+/* Ham menu animation*/
+.menu-toggle span:nth-child(2){
+	transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4){
+	transform-origin: 0 100%;
+}
+
+
+.menu-toggle input:checked ~ span:nth-child(2){
+	transform: rotate(45deg) translate(-1px, -1px);
+}
+
+
+.menu-toggle input:checked ~ span:nth-child(4){
+	transform: rotate(-45deg) translate(0, -1.8px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+	opacity: 0;
+	transform: scale(0);
+}
+
+
+#question {
+	/*position: fixed;*/
+	padding-left: 100px;
+	padding-right: 100px;
+
+}
+
+
+#sooaall {
+	width: 50%
+	/*height: 250px;*/
+	border: 1px;
+}
+table{
+	background-color: white;
+	flex-direction: column;
+	text-align: center;
+}
+
+a{
+	color: white;
+}
+/* Responsive */
+
+/* Ukuran tablet */
+@media screen and (max-width: 768px){
+	nav ul{
+		width: 50%;
+	}
+}
+
+/* Ukuran mobile */
+@media screen and (max-width: 576px){
+	.menu-toggle{
+		display: flex;
+	}
+	nav ul{
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 53%;
+		height: 100vh;
+		justify-content: space-evenly;
+		flex-direction: column;
+		align-items: center;
+		background-color: lightblue;
+		z-index: -1;
+		transform: translateX(100%);  
+		transition: all 1s;
+		opacity: 0;
+	}
+
+	nav ul.slide{
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+.form-soal ul li [type=text]{
+	width: 40%;
+	height: 50px;
+
+}
+
+.form-soal{
+	text-align: center;
+	position: relative;
+	display: block;
+	margin-top: 50px;
+	text-align: top;
+}
+.form-soal ul li {
+	display: block;
+	text-align: center;
+
+}
+
+h2{
+	text-align: center;
+	/*margin-top: 65px*/;
+}
+
+#btn {
+	margin: 20px;
+	padding: 0px 20px;
+  	height: 40px;
+  	font-size: 0.75em;
+  	font-weight: 700;
+  	text-transform: uppercase;
+  	border: 3px black solid;
+  	border-radius: 2px;
+  	background: transparent;
+  	cursor: pointer;
+  	color: #00000;
+
+}
+
+
+/**/
+@media screen and (max-width: 815px){
+	#main{
+		position: relative;
+		margin-left: 0px;
+		margin-top: 50px;
+		text-align: center;
+
+	}
+	#question{
+		
+		margin-left: 0px;
+		margin-top: 50px;
+		text-align: center;
+		
+	}
+
+}
+#tampilan{
+	background-image: url(blue.jpg);
+	background-size: cover;
+	background-position: center;
+	justify-content: center;
+	height: 100vh;
+	padding-top: 10px;
+}
+#btn{
+	margin-top: 100px;
+}
+#bttn{
+	width: 10%;
+	height: 25px;
+	padding: 5px;
+	padding-bottom: 5px;
+}
+#mapel {
+	width: 15%;
+	height: 30px;
+	font-size: 20px;
+	text-align: center;
+}
